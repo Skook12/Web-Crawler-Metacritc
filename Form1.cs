@@ -35,11 +35,12 @@ namespace wcr
             htmlDoc.LoadHtml(pagina);
 
             dataGridView1.Rows.Clear();
+            GameContext GameC = new GameContext();
+            GameC.Iniciar();
 
             string id = string.Empty;
             string nome = string.Empty;
             string nota = string.Empty;
-            string imagem = string.Empty;
             string link = string.Empty;
 
 
@@ -71,9 +72,12 @@ namespace wcr
                     }
                 }
 
-
+                
                 if (!string.IsNullOrEmpty(nome))
                 {
+                    Game g = new Game { Nome = nome, Nota = nota };
+                    GameC.Games.Add(g);
+                    GameC.SaveChanges();
                     dataGridView1.Rows.Add(nome, nota);
                 }
 
