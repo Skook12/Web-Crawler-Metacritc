@@ -32,6 +32,9 @@
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.Link = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Resumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Imagem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +43,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
-            this.Nota});
+            this.Nota,
+            this.Link,
+            this.Resumo,
+            this.Imagem});
             this.dataGridView1.Location = new System.Drawing.Point(12, 101);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -73,6 +79,27 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Link
+            // 
+            this.Link.HeaderText = "Link";
+            this.Link.MinimumWidth = 6;
+            this.Link.Name = "Link";
+            this.Link.Width = 125;
+            // 
+            // Resumo
+            // 
+            this.Resumo.HeaderText = "Resumo";
+            this.Resumo.MinimumWidth = 6;
+            this.Resumo.Name = "Resumo";
+            this.Resumo.Width = 125;
+            // 
+            // Imagem
+            // 
+            this.Imagem.HeaderText = "Imagem";
+            this.Imagem.MinimumWidth = 6;
+            this.Imagem.Name = "Imagem";
+            this.Imagem.Width = 125;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -93,6 +120,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Link;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Resumo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Imagem;
     }
 }
 
